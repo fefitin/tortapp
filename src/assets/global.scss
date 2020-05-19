@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&family=Pacifico&display=swap');
+
+:root {
+  --lightBlue: #ebf2fc;
+  --blue: #bfd4f6;
+  --balsamiq: "Balsamiq Sans";
+  --pacifico: Pacifico;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: inherit;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale  
+}
+
+input, select, button, textarea {
+  border: 0 none;
+  background-color: #FFF;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--blue);
+  color: #FFF;
+  font-size: 1.6em;
+  padding: 0.5em 1.5em;
+  border-radius: 2em;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: var(--balsamiq);
+  background-color: var(--lightBlue);
+}
+
+.App {
+  padding: 2em;
+}
+
+.header {
+  text-align: center;
+  
+  h1 {
+    font-family: var(--pacifico);
+    color: #FFF;
+    font-size: 5em;
+    line-height: 1em;
+    text-transform: lowercase;
+    text-shadow: 1px 1px var(--blue);
+  }
+}
+
+.ingredient-form {
+  display: flex;
+  margin: 4em 0 2em 0;
+
+  input {
+    flex-grow: 1;
+    font-size: 1.6em;
+    padding: 0.5em 1em;
+    border-radius: 2em 0 0 2em;
+    border: 0 none;
+  }
+
+  button {
+    font-family: var(--pacifico);
+    width: 2em;
+    border-radius: 0 3.2em 3.2em 0;
+    font-size: 2em;
+    padding: 0 0.2em 0.3em 0;
+  }
+}
+
+.ingredient-list {
+  background-color: #FFF;
+  box-shadow: 2px 2px 0 var(--blue);
+  list-style: none;
+
+  li {
+    padding: 0.5em 0.75em;
+    border-bottom: 1px dashed var(--blue);
+    font-size: 1.6em;
+    display: flex;
+    justify-content: space-between;
+
+    &:last-child {
+      border: 0 none;
+    }
+
+    svg {
+      margin-left: 1em;
+      color: #c00;
+    }
+  }
+}
+
+h2 {
+  font-size: 1.6em;
+  color: var(--blue);
+  text-shadow: 1px 1px #FFF;
+}
+
+.pan-type {
+  margin-top: 2em;
+
+  select, input {
+    font-size: 1.6em;
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    width: calc(50% - 0.5em);
+    box-sizing: border-box;
+  }
+  
+  input {
+    font-size: 1.6em;
+  }
+}
+
+.pan-size {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  margin-top: 1em;
+}

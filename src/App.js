@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+
+import Header from './components/header';
+import Ingredients from './components/ingredients';
+import Pan from './components/pan';
+
+library.add(faTrashAlt);
 
 function App() {
+  const [ ingredients, setIngredients ] = useState([]);
+  const [ ratio, setRatio ] = useState(1);
+
+  const addIngredient = text => {
+    setIngredients(ingredients.concat(text));
+  }
+
+  const deleteIngredient = index => {
+    setIngredients(ingredients.filter((value, i) => index !== i));
+  }
+
+  const onRatioUpdate = ratio => {
+    setRatio(ratio);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Ingredients ingredients={ingredients} ratio={ratio} addIngredient={addIngredient} deleteIngredient={deleteIngredient} />
+      <Pan onRatioUpdate={onRatioUpdate}></Pan>
     </div>
   );
 }
