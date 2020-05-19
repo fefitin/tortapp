@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Ingredient from './../classes/Ingredient';
+import Ingredient from '../classes/Ingredient';
 
 const Ingredients = ({ ingredients, ratio, addIngredient, deleteIngredient }) => {
   return (<>
@@ -17,6 +17,8 @@ const IngredientForm = ({ addIngredient }) => {
     e.preventDefault();
 
     const ing = new Ingredient(value);
+    
+    //Check if value was detected before saving
     if(ing.value) {
       addIngredient(ing);
       setValue('');

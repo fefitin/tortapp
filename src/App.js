@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
-import Header from './components/header';
-import Ingredients from './components/ingredients';
-import Pan from './components/pan';
+import Header from './components/Header';
+import Ingredients from './components/Ingredients';
+import Pan from './components/Pan';
 
 library.add(faTrashAlt);
 

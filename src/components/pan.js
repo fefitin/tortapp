@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import PanTypeRectangular from './pans/rectangular';
-import PanTypeRound from './pans/round';
-import PanTypeSquare from './pans/square';
+import PanTypeRectangular from './pans/Rectangular';
+import PanTypeRound from './pans/Round';
+import PanTypeSquare from './pans/Square';
 
 const Pan = ({ onRatioUpdate }) => {
 
