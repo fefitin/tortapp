@@ -42,7 +42,7 @@ class Ingredient {
   }
 
   textToRatio(ratio) {
-    return `${Math.round(this._value*ratio)} ${this._extra}`;
+    return `${Math.round(this._value*ratio*10)/10} ${this._extra}`;
   }
 
 }
