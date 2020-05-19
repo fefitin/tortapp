@@ -4,6 +4,7 @@ import Ingredient from './../classes/Ingredient';
 
 const Ingredients = ({ ingredients, ratio, addIngredient, deleteIngredient }) => {
   return (<>
+    <h2>Cargá los ingredientes de tu receta</h2>
     <IngredientForm addIngredient={addIngredient}></IngredientForm>
     <IngredientList ingredients={ingredients} ratio={ratio} deleteIngredient={deleteIngredient}></IngredientList>
   </>);
@@ -25,8 +26,8 @@ const IngredientForm = ({ addIngredient }) => {
   }
 
   return <form className="ingredient-form" onSubmit={add}>
-    <input type="text" placeholder="1 taza de azúcar" onChange={e => setValue(e.target.value)} value={value} />
-    <button type="submit">+</button>
+    <input type="text" placeholder="ej: 1 taza de azúcar" onChange={e => setValue(e.target.value)} value={value} />
+    <button type="submit"><span>+</span></button>
   </form>
 }
 

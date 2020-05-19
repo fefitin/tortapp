@@ -24,6 +24,13 @@ input, select, button, textarea {
   appearance: none;
 }
 
+select, input {
+  font-size: 1.6em;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+}
+
 button {
   cursor: pointer;
   background-color: var(--blue);
@@ -45,6 +52,7 @@ body {
 
 .header {
   text-align: center;
+  margin-bottom: 4em;
   
   h1 {
     font-family: var(--pacifico);
@@ -57,23 +65,30 @@ body {
 }
 
 .ingredient-form {
-  display: flex;
-  margin: 4em 0 2em 0;
+  margin: 1em 0 2em 0;
+  position: relative;
 
   input {
-    flex-grow: 1;
-    font-size: 1.6em;
-    padding: 0.5em 1em;
-    border-radius: 2em 0 0 2em;
-    border: 0 none;
+    width: 100%;
   }
 
   button {
     font-family: var(--pacifico);
-    width: 2em;
-    border-radius: 0 3.2em 3.2em 0;
+    width: 1.35em;
+    height: 1.35em;
+    border-radius: 100%;
     font-size: 2em;
-    padding: 0 0.2em 0.3em 0;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    right: 0.2em;
+    top: 0.2em;
+    line-height: 1em;
+
+    span {
+      position: relative;
+      top: -0.1em;
+    }
   }
 }
 
@@ -96,6 +111,7 @@ body {
     svg {
       margin-left: 1em;
       color: #c00;
+      cursor: pointer;
     }
   }
 }
@@ -110,12 +126,8 @@ h2 {
   margin-top: 2em;
 
   select, input {
-    font-size: 1.6em;
-    border-radius: 2em;
-    padding: 0.5em 1em;
     margin: 0.5em 0;
     width: calc(50% - 0.5em);
-    box-sizing: border-box;
   }
   
   input {
@@ -126,6 +138,10 @@ h2 {
 .pan-size {
   display: flex;
   justify-content: space-between;
+
+  input {
+    margin-bottom: 0;
+  }
 }
 
 .buttons {
