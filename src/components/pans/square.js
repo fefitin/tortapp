@@ -6,6 +6,8 @@ const PanTypeSquare = ({ onAreaChange }) => {
   const updateWidth = (e) => {
     if(e.target.value && !isNaN(e.target.value)) {
       setWidth(parseFloat(e.target.value));
+    } else {
+      setWidth('');
     }
   }
 

@@ -6,6 +6,8 @@ const PanTypeRound = ({ onAreaChange }) => {
   const updateDiameter = (e) => {
     if(e.target.value && !isNaN(e.target.value)) {
       setDiameter(parseFloat(e.target.value));
+    } else {
+      setDiameter('');
     }
   }
 

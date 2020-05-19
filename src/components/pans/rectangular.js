@@ -7,12 +7,16 @@ const PanTypeRectangular = ({ onAreaChange }) => {
   const updateWidth = (e) => {
     if(e.target.value && !isNaN(e.target.value)) {
       setWidth(parseFloat(e.target.value));
+    } else {
+      setWidth('');
     }
   }
 
   const updateHeight = (e) => {
     if(e.target.value && !isNaN(e.target.value)) {
       setHeight(parseFloat(e.target.value));
+    } else {
+      setHeight('');
     }
   }
 
