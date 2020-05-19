@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Ingredient from '../classes/Ingredient';
 
-const Ingredients = ({ ingredients, ratio, addIngredient, deleteIngredient }) => {
+const Ingredients = ({ ingredients, ratio, addIngredient, deleteIngredient, setError }) => {
   return (<>
     <h2>Cargá los ingredientes de tu receta</h2>
-    <IngredientForm addIngredient={addIngredient}></IngredientForm>
+    <IngredientForm addIngredient={addIngredient} setError={setError}></IngredientForm>
     <IngredientList ingredients={ingredients} ratio={ratio} deleteIngredient={deleteIngredient}></IngredientList>
   </>);
 };
 
-const IngredientForm = ({ addIngredient }) => {
+const IngredientForm = ({ addIngredient, setError }) => {
   const [ value, setValue ] = useState('');
 
   const add = (e) => {
@@ -23,7 +23,7 @@ const IngredientForm = ({ addIngredient }) => {
       addIngredient(ing);
       setValue('');
     } else {
-      alert('Ingrediente inválido.');
+      setError(<p>El ingrediente tiene que estar formado por un número y una descripción. <small>- 1 1/2 taza de harina.<br/>- 50g de miel.<br/>- 2 huevos.</small></p>);
     }
   }
 

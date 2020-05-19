@@ -147,3 +147,52 @@ h2 {
 .buttons {
   margin-top: 1em;
 }
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;  
+  
+  .popup {
+    background-color: #FFF;
+    padding: 2em;
+    border-radius: 1.5em;
+    margin: 2em;
+    width: calc(100% - 4em);
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  p {
+    font-size: 1.6em;
+
+    small {
+      display: block;
+      margin-top: 1em;
+      font-size: 0.85em;
+    }
+  }
+
+  .close {
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    padding: 0;
+    line-height: 1em;
+    position: absolute;
+    top: -1em;
+    right: -1em;
+
+    svg {
+      position: relative;
+      top: 0.05em
+    }
+  }
+}
